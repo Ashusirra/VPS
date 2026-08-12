@@ -179,7 +179,7 @@ async def brute_force_otp():
         
         rate_limit_count = 0
         tested_count = 0
-        i = 0  # Starting OTP
+        i = 619200  # Starting OTP
         
         try:
             while i < 1000000:
