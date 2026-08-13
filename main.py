@@ -37,8 +37,9 @@ ping_thread.start()
 async def main():
     # 1. APNE MOBILE NUMBERS YAHAN DAALO (List format me)
     phone_numbers = [
-        "7357580789",
-        "9354100588",
+        "9414710748",
+        "8769390547",
+        "9797579615",
         # Aur jitne chahiye daal lo
     ]
 

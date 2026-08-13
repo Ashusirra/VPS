@@ -106,7 +106,7 @@ async def brute_force_otp():
         otp_background_task = asyncio.create_task(send_otp_periodically(session))
         rate_limit_count = 0
         tested_count = 0
-        i = 334000  # Starting OTP (VPS pe daalne se pehle isko 0 kar dena)
+        i = 0  # Starting OTP (VPS pe daalne se pehle isko 0 kar dena)
         
         try:
             while i < 1000000:
